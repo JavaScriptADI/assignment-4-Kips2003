@@ -102,3 +102,24 @@ console.log(result);
 
 
 // #10
+
+
+let randomY = parseInt((Math.random() * 8) + 1);
+let randomX = parseInt((Math.random() * 8) + 1);
+
+for(let i = 0; i < 10; i++){
+    let sealingFloor = "##########";
+    let sideWall = "#        #";
+    if(i === 0 || i === 9){
+        console.log(sealingFloor);
+        continue;
+    }
+
+    if(i == randomY){
+        let sideWallArray = sideWall.split('');
+        sideWallArray[randomX] = "?";
+        
+        sideWall = sideWallArray.join('');
+    }
+    console.log(sideWall);
+}
