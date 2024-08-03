@@ -164,3 +164,47 @@ for(let i = 0; i < 10; i++){
 
     console.log(stringGenerator);
 }
+
+
+console.clear();
+
+X = parseInt((Math.random() * 8) + 1);
+Y = parseInt((Math.random() * 8) + 1);
+let stringGenerator = "";
+
+for(let i = 0; i < 10; i++){
+
+    if(i === 0 || i === 9){
+        for(let j = 0; j < 10; j++){
+            stringGenerator += "#";
+        }
+        stringGenerator += "\n";
+    }
+    else if(i === Y){
+        for(let j = 0; j < 10; j++){
+            if(j === 0 || j === 9){
+                stringGenerator += "#";
+            }
+            else if(j === Y){
+                stringGenerator += "?";
+            }
+            else{
+                stringGenerator += " ";
+            }
+        }
+        stringGenerator += "\n";
+    }
+    else{
+        for(let j = 0; j < 10; j++){
+            if(j === 0 || j === 9){
+                stringGenerator += "#";
+            }
+            else{
+                stringGenerator += " ";
+            }
+        }
+        stringGenerator += "\n";
+    }
+}
+
+console.log(stringGenerator);
