@@ -123,3 +123,44 @@ for(let i = 0; i < 10; i++){
     }
     console.log(sideWall);
 }
+
+
+// another version of 10
+
+let X = parseInt((Math.random() * 8) + 1);
+let Y = parseInt((Math.random() * 8) + 1);
+
+for(let i = 0; i < 10; i++){
+
+    let stringGenerator = "";
+    if(i === 0 || i === 9){
+        for(let j = 0; j < 10; j++){
+            stringGenerator += "#";
+        }
+    }
+    else if(i === Y){
+        for(let j = 0; j < 10; j++){
+            if(j === 0 || j === 9){
+                stringGenerator += "#";
+            }
+            else if(j === Y){
+                stringGenerator += "?";
+            }
+            else{
+                stringGenerator += " ";
+            }
+        }
+    }
+    else{
+        for(let j = 0; j < 10; j++){
+            if(j === 0 || j === 9){
+                stringGenerator += "#";
+            }
+            else{
+                stringGenerator += " ";
+            }
+        }
+    }
+
+    console.log(stringGenerator);
+}
